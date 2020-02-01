@@ -37,6 +37,8 @@ def parse(cls, path: str) -> List[QuoteModel]
 
 Separate strategy objects should realize `IngestorInterface` for each file type (csv, docx, pdf, txt).
 
+> TIP: pdftotext may not be installed on your local machine (Mac or Windows). If this is the case, you can install using the open source [XpdfReader utility](https://www.xpdfreader.com/pdftotext-man.html).
+
 A final `Ingestor` class should realize the `IngestorInterface` abstract base class and encapsulate your helper classes. It should implement logic to select the appropriate helper for a given file based on filetype.
 
 ### Meme Engine Module
